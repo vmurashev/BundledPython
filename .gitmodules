@@ -1,0 +1,8 @@
+[submodule "cpython2/vendor"]
+	path = cpython2/vendor
+	url = https://github.com/vmurashev/cpython.git
+	branch = 2.7
+[submodule "cpython3/vendor"]
+	path = cpython3/vendor
+	url = https://github.com/vmurashev/cpython.git
+	branch = 3.7

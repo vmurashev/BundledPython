@@ -6,3 +6,24 @@
 	path = cpython3/vendor
 	url = https://github.com/vmurashev/cpython.git
 	branch = 3.7
+[submodule "zlib"]
+	path = zlib
+	url = https://github.com/minibuild/zlib.git
+[submodule "openssl"]
+	path = openssl
+	url = https://github.com/minibuild/openssl.git
+[submodule "openssl_posix_crypt"]
+	path = openssl_posix_crypt
+	url = https://github.com/minibuild/openssl_posix_crypt.git
+[submodule "sqlcipher"]
+	path = sqlcipher
+	url = https://github.com/minibuild/sqlcipher.git
+[submodule "bzip2"]
+	path = bzip2
+	url = https://github.com/minibuild/bzip2.git
+[submodule "ca_certs"]
+	path = ca_certs
+	url = https://github.com/minibuild/ca_certs.git
+[submodule "pyffi"]
+	path = pyffi
+	url = https://github.com/minibuild/pyffi.git

@@ -1,0 +1,8 @@
+#!/bin/sh -e
+SELF_SCRIPT="$0"
+if [ -L "$SELF_SCRIPT" ]; then
+    SELF_SCRIPT=$(readlink -e $SELF_SCRIPT)
+fi
+DIR_HERE=$(cd $(dirname $SELF_SCRIPT) && pwd)
+export LD_LIBRARY_PATH=$DIR_HERE/shared
+exec "$DIR_HERE/python.bin" "$@"

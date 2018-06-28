@@ -1,0 +1,12 @@
+ext_type = 'spec-post-build'
+ext_name = 'pyfreeze'
+
+ext_call_type = 'executable'
+
+ext_native_depends = ['../pystub']
+ext_obj_dir_native_as_var = [['PYSTUB_OBJ_DIR', '../pystub']]
+
+ext_vars_required = ['EXE_SUFFIX', 'OS_SEP', 'DIR_HERE', 'BUILDSYS_TARGET_OBJ_NOARCH_DIR', 'BUILDSYS_TARGET_SRC_DIR']
+ext_local_vars_required = ['PYSTUB_OBJ_DIR']
+
+ext_call_cmdline = '{PYSTUB_OBJ_DIR}{OS_SEP}python{EXE_SUFFIX} {DIR_HERE}{OS_SEP}freeze_python_modules.py --freeze-spec {BUILDSYS_TARGET_OBJ_NOARCH_DIR}{OS_SEP}spec-output.json --output-dir {BUILDSYS_TARGET_SRC_DIR}'

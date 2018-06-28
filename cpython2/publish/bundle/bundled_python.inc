@@ -38,6 +38,7 @@ if BUILDSYS_TARGET_PLATFORM == 'linux':
 composite_spec += [
   [PY_INTERPRETER, PY_INTERPRETER_PROPERTIES],
   ['${@project_root}/cpython2/build/core', PYCORE_PROPERTIES ],
+  ['${@project_output}/obj/cacerts-download/noarch/certdata.pem', {'file': True, 'subdir': 'share/ca-certificates'}],
   ['${@project_root}/cpython2/build/modules/ssl', PYMOD_PROPERTIES],
   ['${@project_root}/cpython2/build/modules/hashlib', PYMOD_PROPERTIES],
   ['${@project_root}/cpython2/build/modules/socket', PYMOD_PROPERTIES],
@@ -51,3 +52,5 @@ composite_spec += [
   ['${@project_root}/cpython2/build/modules/bz2', PYMOD_PROPERTIES],
   ['${@project_root}/cpython2/build/modules/crypt', PYMOD_PROPERTIES],
 ]
+
+explicit_depends = ['${@project_root}/ca_certs']

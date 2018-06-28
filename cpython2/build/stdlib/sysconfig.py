@@ -23,6 +23,7 @@ if os.path.isfile(__file__):
             'platstdlib': '{bundled_root}/modules',
             'purelib': '{{bundled_root}}/python{0}.{1}/site-packages'.format(sys.version_info[0], sys.version_info[1]),
             'platlib': '{{bundled_root}}/python{0}.{1}/site-packages'.format(sys.version_info[0], sys.version_info[1]),
+            'data': '{bundled_root}/share',
             },
         }
 else:
@@ -32,10 +33,11 @@ else:
             'platstdlib': '{bundled_root}/modules',
             'purelib': '{bundled_root}/site-packages',
             'platlib': '{bundled_root}/site-packages',
+            'data': '{bundled_root}/share',
             },
         }
 
-_SCHEME_KEYS = ('stdlib', 'platstdlib', 'purelib', 'platlib')
+_SCHEME_KEYS = ('stdlib', 'platstdlib', 'purelib', 'platlib', 'data')
 _PY_VERSION_SHORT = '{0}.{1}'.format(sys.version_info[0], sys.version_info[1])
 _CONFIG_VARS = None
 

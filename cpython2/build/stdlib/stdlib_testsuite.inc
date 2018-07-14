@@ -7,7 +7,7 @@
             ],
         },
         'exclude-file': {
-            'if-arcpath-equals': ['site.py', 'sysconfig.py', '__phello__.foo.py', '_osx_support.py', 'dbhash.py', 'antigravity.py', 'user.py',
+            'if-arcpath-equals': ['this.py', 'site.py', 'sysconfig.py', '__phello__.foo.py', '_osx_support.py', 'dbhash.py', 'antigravity.py', 'user.py',
                 'wsgiref.egg-info',
                 'pdb.doc',
                 'test/test_crypt.py',

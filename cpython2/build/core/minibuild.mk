@@ -1,19 +1,28 @@
 #include "../../py_version.inc"
 #include "build_list.inc"
 
+import os.path
+
 module_type = 'lib-shared'
 module_name = 'python{}'.format(BUNDLED_PYTHON_VERSION)
 
-include_dir_list = [
-  'pc_clinic',
-  '../../config',
+if os.path.isdir(os.path.join(BUILDSYS_MAKEFILE_DIRNAME, 'pc_clinic')):
+    include_dir_list += ['pc_clinic']
+    src_search_dir_list += ['pc_clinic']
+else:
+    src_search_dir_list += ['../../vendor/PC']
+
+if os.path.isdir(os.path.join(BUILDSYS_MAKEFILE_DIRNAME, '../../config')):
+    include_dir_list += [ '../../config']
+
+
+include_dir_list += [
   '../../vendor/Include',
   '../../vendor/Python',
   '${@project_root}/zlib/include',
 ]
 
-src_search_dir_list = [
-  'pc_clinic',
+src_search_dir_list += [
   '../../vendor/Python',
   '../../vendor/Parser',
   '../../vendor/Objects',

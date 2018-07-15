@@ -1,5 +1,7 @@
 #include "../../../pymod_shared.inc"
 
+import os.path
+
 module_type = 'lib-shared'
 module_name = 'python{}_crypt'.format(BUNDLED_PYTHON_VERSION)
 
@@ -9,8 +11,10 @@ build_list = [
 
 export = ['init_crypt']
 
-include_dir_list = [
-  '../../../config',
+if os.path.isdir(os.path.join(BUILDSYS_MAKEFILE_DIRNAME, '../../../config')):
+    include_dir_list += [ '../../../config']
+
+include_dir_list += [
   '../../../vendor/Include',
   '${@project_root}/openssl_posix_crypt',
   '${@project_root}/openssl/include',

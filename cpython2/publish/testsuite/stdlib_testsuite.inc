@@ -60,10 +60,10 @@
     },
     {
         'catalog': ['site.py', 'sysconfig.py', '_sysconfigdata.py', '_sitebuiltins.py'],
-        'dirname': '.',
+        'dirname': '../../build/stdlib',
     },
     {
         'catalog': ['crypt.py', 'test/test_crypt.py'],
-        'dirname': '../modules/crypt',
+        'dirname': '../../build/modules/crypt',
     },
 ]

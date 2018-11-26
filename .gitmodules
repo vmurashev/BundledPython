@@ -5,7 +5,7 @@
 [submodule "cpython3/vendor"]
 	path = cpython3/vendor
 	url = https://github.com/vmurashev/cpython.git
-	branch = 3.7
+	branch = bundled_3_7_0
 [submodule "zlib"]
 	path = zlib
 	url = https://github.com/minibuild/zlib.git
@@ -27,3 +27,9 @@
 [submodule "pyffi"]
 	path = pyffi
 	url = https://github.com/minibuild/pyffi.git
+[submodule "mpdecimal"]
+	path = mpdecimal
+	url = https://github.com/minibuild/mpdecimal.git
+[submodule "xz"]
+	path = xz
+	url = https://github.com/minibuild/xz.git
